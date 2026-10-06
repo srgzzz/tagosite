@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,181 +11,377 @@
 
 <body>
 
-<header class="navbar">
+<header>
+    <nav class="navbar">
 
-    <a href="index.html" class="logo">
-        TAGO
-        <span>KLUB BILARDOWY</span>
-    </a>
+        <div class="logo">
+            TAGO
+        </div>
 
-    <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="cennik.html">Cennik</a>
-        <a href="turnieje.html" class="active">Turnieje</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="kontakt.html">Kontakt</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="cennik.html">Cennik</a></li>
+            <li><a href="turnieje.html" class="active">Turnieje</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
     </nav>
-
-    <button class="menu-button" id="menuButton">☰</button>
-
 </header>
 
 
-<section class="page-header">
+<main>
 
-    <p class="small-title">RYWALIZACJA</p>
+    <!-- TYTUŁ -->
 
-    <h1>Turnieje</h1>
+    <section class="page-header">
 
-    <p>
-        Sprawdź wyniki i rywalizuj z innymi graczami.
-    </p>
-
-</section>
-
-
-<main class="tournament-page">
-
-    <section class="tournament-intro">
-
-        <p class="small-title">SEZON 2025/26</p>
-
-        <h2>
-            Amatorska Liga <span>TAGO</span>
-        </h2>
+        <h1>Turnieje</h1>
 
         <p>
-            Liga dla miłośników bilarda. 
+            Archiwum turniejów i sezonów TAGO
         </p>
 
     </section>
 
 
-    <section class="table-wrapper">
+    <!-- ARCHIWUM SEZONÓW -->
 
-        <h2>Klasyfikacja</h2>
+    <section class="tournaments-section">
 
-        <table>
+        <h2>Archiwum sezonów</h2>
 
-            <thead>
+        <div class="season-buttons">
 
-                <tr>
-                    <th>#</th>
-                    <th>Zawodnik</th>
-                    <th>Mecze</th>
-                    <th>Wygrane</th>
-                    <th>Bilans</th>
-                    <th>Punkty</th>
-                </tr>
+            <button class="season-btn active" onclick="showSeason('2025-2026')">
+                Sezon 2025/2026
+            </button>
 
-            </thead>
+            <button class="season-btn" onclick="showSeason('2024-2025')">
+                Sezon 2024/2025
+            </button>
 
-            <tbody>
+            <button class="season-btn" onclick="showSeason('2023-2024')">
+                Sezon 2023/2024
+            </button>
 
-                <tr>
-                    <td>1</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>23</td>
-                    <td>+74</td>
-                    <td><strong>46</strong></td>
-                </tr>
+            <button class="season-btn" onclick="showSeason('2022-2023')">
+                Sezon 2022/2023
+            </button>
 
-                <tr>
-                    <td>2</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>19</td>
-                    <td>+39</td>
-                    <td><strong>38</strong></td>
-                </tr>
+            <button class="season-btn" onclick="showSeason('2021-2022')">
+                Sezon 2021/2022
+            </button>
 
-                <tr>
-                    <td>3</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>18</td>
-                    <td>+48</td>
-                    <td><strong>36</strong></td>
-                </tr>
+        </div>
 
-                <tr>
-                    <td>4</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>18</td>
-                    <td>+25</td>
-                    <td><strong>36</strong></td>
-                </tr>
 
-                <tr>
-                    <td>5</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>17</td>
-                    <td>+33</td>
-                    <td><strong>34</strong></td>
-                </tr>
+        <!-- SEZON 2025/2026 -->
 
-                <tr>
-                    <td>6</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>15</td>
-                    <td>+15</td>
-                    <td><strong>30</strong></td>
-                </tr>
+        <div id="2025-2026" class="season-content active">
 
-                <tr>
-                    <td>7</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>15</td>
-                    <td>+11</td>
-                    <td><strong>30</strong></td>
-                </tr>
+            <h3>Sezon 2025/2026</h3>
 
-                <tr>
-                    <td>8</td>
-                    <td>xyz</td>
-                    <td>26</td>
-                    <td>14</td>
-                    <td>+14</td>
-                    <td><strong>28</strong></td>
-                </tr>
+            <div class="table-wrapper">
 
-            </tbody>
+                <table>
 
-        </table>
+                    <thead>
+                        <tr>
+                            <th>Miejsce</th>
+                            <th>Zawodnik</th>
+                            <th>Punkty</th>
+                            <th>Turnieje</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Jan Kowalski</td>
+                            <td>125</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Piotr Nowak</td>
+                            <td>110</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Michał Wiśniewski</td>
+                            <td>98</td>
+                            <td>7</td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Adam Zieliński</td>
+                            <td>85</td>
+                            <td>7</td>
+                        </tr>
+
+                        <tr>
+                            <td>5</td>
+                            <td>Tomasz Wójcik</td>
+                            <td>72</td>
+                            <td>6</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEZON 2024/2025 -->
+
+        <div id="2024-2025" class="season-content">
+
+            <h3>Sezon 2024/2025</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Miejsce</th>
+                            <th>Zawodnik</th>
+                            <th>Punkty</th>
+                            <th>Turnieje</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Adam Kowalski</td>
+                            <td>140</td>
+                            <td>9</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Piotr Nowak</td>
+                            <td>118</td>
+                            <td>9</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Marek Zieliński</td>
+                            <td>101</td>
+                            <td>8</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEZON 2023/2024 -->
+
+        <div id="2023-2024" class="season-content">
+
+            <h3>Sezon 2023/2024</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Miejsce</th>
+                            <th>Zawodnik</th>
+                            <th>Punkty</th>
+                            <th>Turnieje</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Paweł Nowak</td>
+                            <td>132</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Marcin Kowalski</td>
+                            <td>115</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Łukasz Wójcik</td>
+                            <td>96</td>
+                            <td>7</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEZON 2022/2023 -->
+
+        <div id="2022-2023" class="season-content">
+
+            <h3>Sezon 2022/2023</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Miejsce</th>
+                            <th>Zawodnik</th>
+                            <th>Punkty</th>
+                            <th>Turnieje</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Jan Nowak</td>
+                            <td>128</td>
+                            <td>8</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Robert Kowalski</td>
+                            <td>109</td>
+                            <td>7</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEZON 2021/2022 -->
+
+        <div id="2021-2022" class="season-content">
+
+            <h3>Sezon 2021/2022</h3>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Miejsce</th>
+                            <th>Zawodnik</th>
+                            <th>Punkty</th>
+                            <th>Turnieje</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Mateusz Nowak</td>
+                            <td>120</td>
+                            <td>7</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Jakub Wójcik</td>
+                            <td>104</td>
+                            <td>7</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
 
     </section>
 
 
-    <section class="rules">
+    <!-- REGULAMIN -->
 
-        <h2>Jak działa liga?</h2>
+    <section class="rules-section">
 
-        <div class="rule-grid">
+        <h2>Regulamin turniejów</h2>
 
-            <div>
-                <strong>01</strong>
-                <p>Każdy zawodnik rozgrywa mecze z pozostałymi.</p>
-            </div>
+        <div class="rules-box">
 
-            <div>
-                <strong>02</strong>
-                <p>Gramy mecz oraz rewanż.</p>
-            </div>
+            <h3>1. Postanowienia ogólne</h3>
 
-            <div>
-                <strong>03</strong>
-                <p>Spotkania rozgrywane są do pięciu wygranych partii.</p>
-            </div>
+            <p>
+                Turnieje organizowane są na terenie Klubu Bilardowego TAGO.
+                Udział w turniejach jest dobrowolny i oznacza akceptację
+                niniejszego regulaminu.
+            </p>
 
-            <div>
-                <strong>04</strong>
-                <p>O miejscu w tabeli decydują punkty i bilans partii.</p>
-            </div>
+
+            <h3>2. Zgłoszenia</h3>
+
+            <p>
+                Zawodnik zobowiązany jest zgłosić swój udział przed rozpoczęciem
+                turnieju. Liczba uczestników może być ograniczona.
+            </p>
+
+
+            <h3>3. Zasady gry</h3>
+
+            <p>
+                Mecze rozgrywane są zgodnie z zasadami obowiązującymi dla
+                danej odmiany bilarda. Ostateczne decyzje dotyczące przebiegu
+                turnieju podejmuje organizator.
+            </p>
+
+
+            <h3>4. Kultura gry</h3>
+
+            <p>
+                Uczestnicy zobowiązani są do zachowania zasad fair play,
+                szacunku wobec innych zawodników oraz dbania o wyposażenie klubu.
+            </p>
+
+
+            <h3>5. Postanowienia końcowe</h3>
+
+            <p>
+                Organizator zastrzega sobie prawo do zmian w harmonogramie
+                oraz regulaminie turniejów. Wszelkie kwestie sporne rozstrzyga
+                organizator.
+            </p>
 
         </div>
 
@@ -198,15 +392,7 @@
 
 <footer>
 
-    <div>
-        <strong>TAGO</strong>
-        <p>Klub Bilardowy</p>
-    </div>
-
-    <div>
-        <p>Łódź, ul. Brzeźna 3</p>
-        <p>© 2026 TAGO</p>
-    </div>
+    <p>© 2026 TAGO Klub Bilardowy</p>
 
 </footer>
 
